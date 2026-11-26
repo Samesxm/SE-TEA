@@ -11,6 +11,7 @@ def iniciar_pool_conexiones():
             pool_size=5,
             pool_reset_session=True,
             host=st.secrets["db_credenciales"]["host"],
+            port=int(st.secrets["db_credenciales"].get("port", 3306)),
             user=st.secrets["db_credenciales"]["usuario"],
             password=st.secrets["db_credenciales"]["password"],
             database=st.secrets["db_credenciales"]["database"]
